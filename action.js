@@ -8,12 +8,12 @@ function createRandomNumber(){
 function checkNumber(){
     clicked++
     document.querySelector('.btn').innerHTML = 'Check(' + clicked + ')'
-    var inputValue = document.getElementById('inputValue').value;
+    var inputValue = Number(document.getElementById('inputValue').value);
     document.getElementById('inputValue').focus();
     document.getElementById('inputValue').placeholder = "You previously entered "+inputValue;
     document.getElementById('inputValue').value = '';
     console.log(inputValue)
-    if(typeof(inputValue) != Number){
+    if(typeof(inputValue) != String){
         if((inputValue > -1) && (inputValue < 21) ){
             document.querySelector('.btn').style.color = "white"
             if(randomNumber == inputValue){
