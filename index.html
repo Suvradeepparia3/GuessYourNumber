@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="action.js" type="text/javascript"></script>
+    <title>Guess</title>
+</head>
+<body onload="createRandomNumber()">
+    <div class="header">
+        <b>Random Guess</b>
+    </div>
+
+    <section >
+        <div class="contentHeader">
+            <div class="contentHeaderText">
+                Guess a random number between (1-20)
+            </div>
+        </div>
+        <div class="searchPlace">
+                <input type="number" class="input" placeholder="Enter number" id="inputValue" autofocus>
+                <span><button type="button" class="btn" onclick="checkNumber()">Check</button></span>
+        </div>
+        <div class="comment">
+            <div class="commentText" id="status">Let's take a break, play a Game.</div>
+        </div>
+    </section>
+</body>
+</html>
