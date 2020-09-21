@@ -3,7 +3,6 @@ var clicked = 0;
 
 function createRandomNumber(){
     randomNumber = Math.floor(Math.random() * 20);
-    console.log(randomNumber)
 }
 
 function checkNumber(){
@@ -19,6 +18,9 @@ function checkNumber(){
         if(randomNumber == inputValue){
             document.getElementById('status').innerHTML = 'Hurrahh!! You found me.'
             document.querySelector('.btn').style.backgroundColor = "green"
+            setTimeout(function(){
+                location.reload()
+            },3000)
         } else if(Math.abs(randomNumber - inputValue) >= 7) {
             document.getElementById('status').innerHTML = 'You are far away.'
             document.querySelector('.btn').style.backgroundColor = "tomato"
